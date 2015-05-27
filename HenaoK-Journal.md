@@ -1,4 +1,4 @@
-# Primera clase 
+# Primera clase 27-Mayo-2015
 ¡Hola mundo!, este es el comienzo del curso **Métodos Computacionales**.
 
 Herramientas del curso:
