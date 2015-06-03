@@ -18,3 +18,4 @@ y los métodos a estudiar son:
 
 Métodos importantes:
 curl: Permite la obtención del código de una dirección web. Por ejemplo curl -s http://arxiv.org/list/q-bio/new. La opción -s hace que el programa no muestre información acerca del proceso de obetención del código.
+
