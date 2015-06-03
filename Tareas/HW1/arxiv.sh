@@ -7,7 +7,7 @@
  echo "Ingrese lo que desea buscar en el material nuevo de esta sección:"
  read tema
  echo "=========================================================="
- echo "El número de artículos nuevos con el tema buscado fue:"
+ echo -e "El número de artículos nuevos con el tema buscado fue:\c"
  respuesta=$(curl -s http://arxiv.org/list/q-bio/new | grep \>Title:| grep -ic $tema)
  echo $respuesta
  if [ "$respuesta" != "0" ]; then
