@@ -1,9 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Creator: Tk Canvas Widget
-%%For: niveku,,,
-%%Title: Window .140063018735448
-%%CreationDate: Tue Jun 16 22:38:36 2015
-%%BoundingBox: 82 172 530 620
+%%For: KEVIN FELIPE HENAO LOPEZ
+%%Title: Window .140325802902736
+%%CreationDate: Wed Jun 17 10:28:02 2015
+%%BoundingBox: 81 171 531 621
 %%Pages: 1
 %%DocumentData: Clean7Bit
 %%Orientation: Portrait
@@ -78,7 +78,7 @@ baselineSampler 0 196 put
 %%Page: 1 1
 save
 306.0 396.0 translate
-0.7491 0.7491 scale
+0.75 0.75 scale
 2 -299 translate
 -301 598 moveto 297 598 lineto 297 0 lineto -301 0 lineto closepath clip newpath
 gsave
