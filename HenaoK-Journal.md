@@ -52,4 +52,8 @@ curl -s http://arxiv.org/list/q-bio/new. La opción -s (silence) hace que el pro
 ### Séptima clase: 10-Junio-2015
 ### Octava clase: 16-Junio-2015
 Interpolación.
+### Novena clase: 17-Junio-2015
+Raices
+Git Hub: Ramas
+Análisis De fourier
 
