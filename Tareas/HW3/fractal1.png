@@ -1,9 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Creator: Tk Canvas Widget
-%%For: KEVIN FELIPE HENAO LOPEZ
-%%Title: Window .140325802608328
-%%CreationDate: Wed Jun 17 11:54:01 2015
-%%BoundingBox: 81 171 531 621
+%%For: niveku,,,
+%%Title: Window .140554742221928
+%%CreationDate: Thu Jun 18 19:09:12 2015
+%%BoundingBox: 82 172 530 620
 %%Pages: 1
 %%DocumentData: Clean7Bit
 %%Orientation: Portrait
@@ -78,7 +78,7 @@ baselineSampler 0 196 put
 %%Page: 1 1
 save
 306.0 396.0 translate
-0.75 0.75 scale
+0.7491 0.7491 scale
 2 -299 translate
 -301 598 moveto 297 598 lineto 297 0 lineto -301 0 lineto closepath clip newpath
 gsave
@@ -86,32 +86,20 @@ grestore
 gsave
 grestore
 gsave
+grestore
+gsave
 -180 397 moveto
+-63.3333333333334 397 lineto
+-5.00000000000009 498.036297108185 lineto
+53.3333333333333 397 lineto
 170 397 lineto
--4.99999999999991 93.8911086754464 lineto
--180 397 lineto
-1 setlinecap
-1 setlinejoin
-1 setlinewidth
-[] 0 setdash
-0.000 0.000 0.000 setrgbcolor AdjustColor
-stroke
-grestore
-gsave
-grestore
-gsave
--180 397 moveto
--64 397 lineto
--6.00000000000009 497.458946838995 lineto
-52 397 lineto
-168 397 lineto
-110 296.541053161005 lineto
-168 196.082106322011 lineto
-52.0000000000001 196.08210632201 lineto
--5.99999999999977 95.6231594830155 lineto
--63.9999999999998 196.08210632201 lineto
--180 196.08210632201 lineto
--122 296.541053161005 lineto
+111.666666666667 295.963702891816 lineto
+170 194.927405783631 lineto
+53.3333333333335 194.927405783631 lineto
+-4.99999999999977 93.8911086754467 lineto
+-63.3333333333332 194.927405783631 lineto
+-180 194.927405783631 lineto
+-121.666666666667 295.963702891816 lineto
 -180 397 lineto
 1 setlinecap
 1 setlinejoin
