@@ -57,3 +57,9 @@ Raices
 Git Hub: Ramas
 Análisis De fourier
 
+### Onceava clase: 24-Junio-2015
+Integración numérica.
+**Trapezoidal:** Uniendo valores de F(x) por líneas rectas en distintos espacios.
+**Polinomial:** Se unen valores de F(x) empleando interpolaciones con polinomios de 2do grado.
+**De alguien (Lagrange):** La cual elige las x optimas para interpolar con polinomios de grado *n-1*.  
+- Grandshmith--> ortonormalización 
