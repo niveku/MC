@@ -266,6 +266,50 @@ Análisis De fourier
 
 ### Décima Clase: 19-Junio-2015
 
+### 23-Junio
+
+##### Solar cycle
+
+```python
+%pylab inline
+archivo = genfromtxt("monthrg.dat")
+years = array(archivo[:,0] + archivo[:,1]/12)
+means = array(archivo[:,3])
+
+x = []
+y = []
+
+for i in range (len(years)):
+    if means[i] > 0 and years[i] >= 1800 and len(x) < 2048:
+        x.append(years[i])
+        y.append(means[i])
+
+N = 2**11 
+fr = 1/(x[-1]-x[1])
+dt = 1./fr / N       
+trans = fft.fft(y)
+freq = fftfreq(N, dt)
+
+trans[abs(freq) > 0.2] = 0
+
+y2 = ifft (trans)       
+figure(figsize= (8,8))
+plot(x,y, "cyan")
+plot(x, real(y2), color = "red")
+#xlim (1800,2000)
+ylim (0,250)
+show()
+```
+
+y junto a esto se grafican la frecuencias y se observa que los picos están cercanos a 0.9 lo que indica que los ciclos solares se llevan a cabo cerca de los **11** años. 
+
+```python
+figure() 
+plot (freq, abs(trans))
+xlim(-0.2,0.2)
+show()
+```
+
 ### Onceava clase: 24-Junio-2015
 Integración numérica.
 **Trapezoidal:** Uniendo valores de F(x) por líneas rectas en distintos espacios.
@@ -286,3 +330,9 @@ map.show_mpl(figsize=(8, 8)) #Crea el mapa como figúra de Matplotlib con unas d
 plot(x,y) #Plotea el recorrido usando las posiciones en pixeles como un comando de Matplotlib.
 show()
 ```
+### Doceava clase: 26-Junio-2015
+
+### Treceava clase: 30-Junio-2015
+
+Ecuaciones diferenciales de método adaptativo 
+Adam-Bashfort:Encuentra la interpolación de derivadas anteriores y extrapola la solución
