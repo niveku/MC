@@ -19,24 +19,6 @@ y los métodos a estudiar son:
 5. Ecuaciones diferenciales parciales
 6. Métodos de Monte carlo.
 
-#### Git
-
-[Git](https://git-scm.com/) Es un software libre que permite llevar un apropiado registro y manejo de proyectos. Este crea espacios en el que se pueden guardar distintos estados de los archivos trabajados para poder ver su evoulución o recuperarlos si es necesario.
-
-#### GitHub
-
-[GitHub](https://github.com) Es un página de internet que integra el sistema Git en línea facilitando su uso y el trabajo  compartido.
-Será una de las principales herramientas del curso ya que a través de esta se subiran y calificaran las actividades.
-
-##### Métodos para el uso de Git en laterminal
-```bash
-$ git clone [url] # Permite clonar un repositorio de internet (como de GitHub) al computador.
-$ git add --all # Agrega todos los cambios realizados para hacer un commit.
-$ git -m commit [Mensaje] # Hace un commit (acuerdo que guarda el estado del proyecto). La opción -m permite mandar el mensaje del commit directamente desde la terminal.
-$ git pull origin master # Importa los cambios del proyecto desde el repositorio en línea. Para esto se debió haber clonado un repositorio.
-$ git push origin master # Exporta los cambios realizados en el computador al repositorio en línea. Cuidado: El repositorio local debe estar actualizado antes de hacer esto.
-$ git log # Muestra el historial de los commits que se han realizado.
-```
 #### Otros comandos en la terminal
 **ssh:** Es un protocolo de redes que permite conectarse a computadores remotamente.
 ```bash
@@ -110,8 +92,26 @@ $ wget -q dirección.com/documento.doc # -q para que no muestre información del
 $ awk -F "," '{print $1}' archivo.csv #Imprime la segunda columna de un archivo delimitado por comas.
 $ awk -F "," -v var=$varbash '{if(var==condición){Acción}}' archivo.csv # Importa una variable de bash a awk para que pueda ser usada en éste módulo.
 ```
+#### Git
 
-#### Hands-On1
+[Git](https://git-scm.com/) Es un software libre que permite llevar un apropiado registro y manejo de proyectos. Este crea espacios en el que se pueden guardar distintos estados de los archivos trabajados para poder ver su evoulución o recuperarlos si es necesario.
+
+#### GitHub
+
+[GitHub](https://github.com) Es un página de internet que integra el sistema Git en línea facilitando su uso y el trabajo  compartido.
+Será una de las principales herramientas del curso ya que a través de esta se subiran y calificaran las actividades.
+
+##### Métodos para el uso de Git en laterminal
+```bash
+$ git clone [url] # Permite clonar un repositorio de internet (como de GitHub) al computador.
+$ git add --all # Agrega todos los cambios realizados para hacer un commit.
+$ git -m commit [Mensaje] # Hace un commit (acuerdo que guarda el estado del proyecto). La opción -m permite mandar el mensaje del commit directamente desde la terminal.
+$ git pull origin master # Importa los cambios del proyecto desde el repositorio en línea. Para esto se debió haber clonado un repositorio.
+$ git push origin master # Exporta los cambios realizados en el computador al repositorio en línea. Cuidado: El repositorio local debe estar actualizado antes de hacer esto.
+$ git log # Muestra el historial de los commits que se han realizado.
+```
+
+##### Local - Git (H-O1)
 ```bash
 $ echo "ejemplo" > ejemplo.txt # Crea un archivo.
 $ git add ejemplo.txt # Agrega el archivo al área para hacer commit.
@@ -121,7 +121,7 @@ $ git commit -m "Borro archivo" # Reporta los cambios al repositorio
 $ git log # Muestra los commits que se han realizado.
 $ git checkout iddelcommit # Permite revisar el repositorio en el estado del commit indicado
 ```
-##### Git
+##### Git (H-O1)
 se obtiene el archivo de /usuarios/homenfs7/j-lizara/Shared/MetodosComputacionales.tgz
 ```bash
 $ tar -xvf MetodosComputacionales.tgz # Descomprime el archivo.
@@ -158,16 +158,17 @@ Son usadas para aumentar la eficiencia en múltiples tareas de programación ya 
 |**\\**| Permite usar los caracteres empleados para otras expresiones (\\. \\* \\$ )|
 |**\\(\\)**| Permite agrupar condiciones|
 |**\\{n\\}**| Indíca el número de veces que se repite una expresión regular anterior|
+|**[:space:]**| Indica cualquier tipo de espacios en blanco|
 
-###### Ejemplo del Hands-on2
+##### Sed (H-O2)
 ```bash
 $ sed -E 's/^.... //g' #Busca y elimina 4 caracteres que esten al comiezo de las líneas y continuen con un espacio.
 ```
-##### Pi
+##### Pi (H-O2)
 ```bash
 $ curl -s http://pi.karmona.com/ | sed 's/[^0-9]//g' | sed 's/103/3./g' | sed 's/.\{20\}/& \n/g' > PIslices20.dat # Descarga el archivo de los dígitos del número pi, borra todo lo que no sea número, arregla los primeros dígitos y los separa en líneas con 20 caracteres redireccionando el resultado a un nuevo archivo.
 ```
-##### Script Bash
+##### Script Bash (H-O2)
 ```bash
 $ editorausar nombrescript.sh # Crea el archivo del script y lo abre en un editor indicado.
 ```
@@ -189,12 +190,23 @@ Fuera del editor
 $ chmod +x graficadorGnuplot.sh
 $ ./graficadorGnuplot.sh joviansatellites.csv 2 3
 ```
+
+![Graficador](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on2/grafica.png)
+
 ### Cuarta clase: 3-Junio-2015
 #### Gnuplot 2da parte
 ### Quinta clase: 5-Junio-2015
-##### Make
-Es un comando de la terminal que permite crear ejecutables a partir de la compilación de archivos escritos en diferentes lenguajes de programación, lo que le da una amplia utilidad en ámbitos académicos y prácticos.
+
 ### Sexta clase: 9-Junio-2015
+##### Make (H-O4)
+Es un comando de la terminal que permite crear ejecutables a partir de la compilación de archivos escritos en diferentes lenguajes de programación, lo que le da una amplia utilidad en ámbitos académicos y prácticos.
+
+##### Proyecto final
+Me gustaría trabajar algo relacionado con geociencias, tengo pensado dos cosas:
+- Nucleación y crecimiento de cristales a partir de un magma.
+- Partición y evolución de un magma básico.
+
+Debo investigar más acerca de los componentes computacionales del proyecto.
 ### Séptima clase: 10-Junio-2015
 #### Matplotlib
 Es una librería de recursos que se integran python para la generación de gráficas, el ploteo y análisis de datos. Es una de las librerías importadas con el comándo mágico %pylab inline
@@ -210,7 +222,7 @@ legend() # Permite la inserción de leyendas en las gráficas.
 savefig() # Permite exportar la imágen en varios formatos.
 show() # Muestra la gráfica creada.
 ```
-#### Lissajous
+#### Lissajous (H-O5)
 ```python
 %pylab inline
 
@@ -232,6 +244,8 @@ for i in range(25):
 
 show()
 ```
+![Lissajaus](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on5/Lissajous.png)
+
 ### Octava clase: 16-Junio-2015
 
 #####Interpolación
@@ -266,9 +280,66 @@ Análisis De fourier
 
 ### Décima Clase: 19-Junio-2015
 
-### 23-Junio
+Se trabajó acerca de **la transformada Fourier** y el manejo de imágenes en python con el uso de la librería **scipy**.
 
-##### Solar cycle
+#### Lena (H_O9)
+Lena es un ejemplo de una foto de un mujer convertida en una matriz de 512x512 que contiene los datos sobre su color en escala de grises. Se puede observar de la siguiente forma:
+
+```python
+#Importar las librerias necesarias.
+%matplotlib inline
+import matplotlib.pyplot as plt
+from scipy import misc
+lena = misc.lena() # El paquete misc contiene el método lena() con la foto.
+plt.figure(figsize=(8,8))
+plt.imshow(lena, cmap="gray") # Se plotea la imágen en escala de grises.
+plt.axis('off') # Se Remueven los ejes.
+plt.show()
+```
+
+Podemos fabricar su **negativo** de la siguiente manera:
+```python
+import numpy as np
+negativo = np.zeros((len(lena),len(lena))) # Crea matriz con ceros del tamaño de la imágen de lena.
+for i in range(len(lena)): #Recorre todos los puntos de lena.
+    for j in range(len(lena)):
+        negativo[i][j] = 255 - lena[i][j] #255 es el valor máximo de intensidad del color.
+...
+plt.imshow(negativo, cmap="gray") # Se plotea el negativo en escala de grises.
+...
+```
+
+Asimismo, se puede **invertir horizontalmente**.
+
+```python
+horizontal = np.zeros((len(lena),len(lena)))
+for i in range(len(lena)):
+    for j in range(len(lena)):
+        horizontal[i][-j] = lena[i][j]
+...
+plt.imshow(horizontal, cmap="gray")# Se plotea el negativo en escala de grises.
+...
+```
+
+o se puede **invertir vericalmente**.
+
+```python
+vertical = np.zeros((len(lena),len(lena)))
+for i in range(len(lena)):
+    for j in range(len(lena)):
+        vertical[-i][j] = lena[i][j]
+...
+plt.imshow(vertical, cmap="gray") # Se plotea el negativo en escala de grises.
+...
+```
+
+### Onceava Clase: 23-Junio-2015
+
+##### Derivación numérica
+
+Se estudió acerca de los métodos numéricos para hallar derivaciones en python extendible a otros lenguajes.
+
+##### Solar cycle (H-O10)
 
 ```python
 %pylab inline
@@ -300,6 +371,7 @@ plot(x, real(y2), color = "red")
 ylim (0,250)
 show()
 ```
+![Solar Cycle](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on10/solarcicle.png)
 
 y junto a esto se grafican la frecuencias y se observa que los picos están cercanos a 0.9 lo que indica que los ciclos solares se llevan a cabo cerca de los **11** años. 
 
@@ -309,9 +381,11 @@ plot (freq, abs(trans))
 xlim(-0.2,0.2)
 show()
 ```
+![Solar Cycle Freq](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on10/Freq.png)
 
-### Onceava clase: 24-Junio-2015
-Integración numérica.
+
+### Doceava clase: 24-Junio-2015
+#### Integración numérica
 **Trapezoidal:** Uniendo valores de F(x) por líneas rectas en distintos espacios.
 **Polinomial:** Se unen valores de F(x) empleando interpolaciones con polinomios de 2do grado.
 **De alguien (Lagrange):** La cual elige las x optimas para interpolar con polinomios de grado *n-1*.
@@ -330,9 +404,21 @@ map.show_mpl(figsize=(8, 8)) #Crea el mapa como figúra de Matplotlib con unas d
 plot(x,y) #Plotea el recorrido usando las posiciones en pixeles como un comando de Matplotlib.
 show()
 ```
-### Doceava clase: 26-Junio-2015
+### Treceava clase: 26-Junio-2015
 
-### Treceava clase: 30-Junio-2015
+#### Solución a ecuaciones diferenciales.
 
-Ecuaciones diferenciales de método adaptativo 
-Adam-Bashfort:Encuentra la interpolación de derivadas anteriores y extrapola la solución
+Se estudiaron métodos para la solución de ecuaciones diferenciales ordinarias haciendo énfasis en el método de **Runge-Kutta**.
+
+(H_O11)
+
+### Catorceava clase: 30-Junio-2015
+
+#### Ecuaciones diferenciales ordinarias con método adaptativo
+
+Se estudió un método en clase que permitía ir revisando el error local y global de la solución a una ecuación dierencial para que se iterara varias veces hasta lograr una tolerancia de error deseada.
+
+
+**Adam-Bashfort: ** Método de resolución de ecuaciones diferenciales ordinarias que encuentra la interpolación de derivadas anteriores y extrapola la solución.
+
+(H_O12)
