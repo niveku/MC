@@ -160,6 +160,22 @@ Son usadas para aumentar la eficiencia en múltiples tareas de programación ya 
 |**\\{n\\}**| Indíca el número de veces que se repite una expresión regular anterior|
 |**[:space:]**| Indica cualquier tipo de espacios en blanco|
 
+##### GnuPlot
+[GnuPlot](http://www.gnuplot.info/) es una utilidad para generar gráficos a partir de líneas de comando que se puede implementar en distintos sistemas operativos. Es de bastante utilidad para generar gráficas sencillas en ambientes como la terminal.
+
+```bash
+$ gnuplot
+gnuplot> set term dumb # Grafica dentro de la terminal.
+gnuplot> set title "Title" # Permite poner títulos.
+gnuplot> set xlabel "X" # Permite etiquetar el eje x.
+gnuplot> set ylabel "Y" # Permite etiquetar el eje y.
+gnuplot> plot sin(x) # Grafíca la función seno.
+gnuplot> set parametric # Cambia el tipo de gráficas a paramétricas
+gnuplot> set size ratio 0.5 # Cambia el aspecto de la gráfica.
+gnuplot> plot [0:2*pi] sin(t),cos(t) # Grafica un círculo
+# gracias al intervalo desde 0 a 2 * pi.
+```
+
 ##### Sed (H-O2)
 ```bash
 $ sed -E 's/^.... //g' #Busca y elimina 4 caracteres que esten al comiezo de las líneas y continuen con un espacio.
@@ -195,8 +211,86 @@ $ ./graficadorGnuplot.sh joviansatellites.csv 2 3
 
 ### Cuarta clase: 3-Junio-2015
 #### Gnuplot 2da parte
+
+Gnuplot permite otras opciones como el manejo de escála logarítmica, el empleo de fechas en un eje o crear ajuste para datos.
+
+##### Otros métodos útiles con GnuPlot
+```bash
+$ gnuplot
+gnuplot > set term qt # Grafica en una ventana externa.
+gnuplot > set logscale xy # Dispone los ejes indicado en escála logarítmica.
+gnuplot > unset key # Remueve la leyenda de la gráfica.
+gnuplot > set datafile separator "," # Indíca que el archivo está separado por comas.
+gnuplot > plot "archivo.csv" using 2:3 with points.
+# Grafica los datos encontrados en la segunda y tercer columna de un archivo poniendo puntos en sus coordenadas.
+gnuplot> set grid # Crea una rejilla en la gráfica.
+gnuplot> func1(x) = sin(x) # Permite definir una función o constante.
+gnuplot> plot func1,func2 with yerrosbars
+#Permite gráficar más de una función a la vez. En este caso más barra de error.
+```
 ### Quinta clase: 5-Junio-2015
 
+#### Python
+
+[Python](https://www.python.org/) es un lenguaje de programación completo, de fácil manejo y gran eficiencia usado en grandes ámbitos industriales como Youtube o Google.
+
+Este lenguaje tiene ciertos tipos de elementos los cuales son:
+- **Str:** Cadenas de caracteres como letras o número.
+- **Int:** Números enteros.
+- **Float:** Número decimales.
+- **Boolean:** Verdadero (*True*) o falso (*FalseS*)
+
+Algunas de las acciones básicas que se pueden realizar con valores y objetos son:
+
+| Operador | Acción |
+|--------|--------|
+|    **+**    | Suma |
+|**-**| Resta|
+|**\***| Multiplicación|
+|**%**| Módulo (residuo)|
+|**\*\***| Exponente|
+
+También es posible cambiar los tipos de los atributos con los siguienetes comandos:
+
+| Método | Conversión |
+|--------|--------|
+| **str()**| Convierte e un objeto a una cadena de caracteres|
+| **abs()**| Convierte un número a su valor positivo|
+| **int()**| Convierte y redondea un número a un entero|
+| **len()**| *int* que indica el largo de un objeto|
+
+Adicionalemente, se pueden generar ciclos, búcles y condiciones:
+
+ ```python
+if a==b: # Si "a" es igual a "b".
+ 	acción
+if a!=b # Si "a" es diferente de "b".
+	acción
+if a<b: # Si "a" es menor que "b".
+	acción
+if a>=b: # Si "a" es mayor o igual a "b".
+	acción
+for i in range(10): # Por cada i que toma valores entre 0 y 9.
+	acción
+while (condicion): # Mientras se cumpla la condición.
+	acción
+```
+
+Asimismo, se pueden adicionar módulos para ampliar la funcionalidad de python con la función **import**. Tales como los siguientes:
+
+- **Matplotlib: ** Para gráficos y ploteo de datos.
+- **Numpy:** Para operaciones y funciones matemáticas.
+- **Scypi:** Para métodos matemáticos complejos.
+
+##### Ipython
+
+Es un complemento para python que ofrece herramientas interactivas como el cuaderno. El cual permite probar en cualquier momento el código escrito y ver su resultado o errores arrojados.
+
+Para ejecutar el ambiente de cuadernos de est dependencia se ejecuta el siguiente código:
+
+```bash
+$ ipython notebook # Se debe encontrar previamente instalado.
+```
 ### Sexta clase: 9-Junio-2015
 ##### Make (H-O4)
 Es un comando de la terminal que permite crear ejecutables a partir de la compilación de archivos escritos en diferentes lenguajes de programación, lo que le da una amplia utilidad en ámbitos académicos y prácticos.
@@ -245,8 +339,20 @@ for i in range(25):
 show()
 ```
 ![Lissajaus](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on5/Lissajous.png)
+### Octava Clase: 12-Junio-2015
 
-### Octava clase: 16-Junio-2015
+#### Errores (H_O6)
+
+Se realizó la lectura correspondiente al segundo capítulo del libro de ==Landou== que trataba acerca de los errores e incertidumbres en cálculos numéricos con métodos computacionales. Es importante conocer y saber manejar estos errores ya que generan incertidumbres en nuestros resultados y son prácticamente imposibles de evadir en el proceso de programación.
+
+Se encontró que existen 4 tipos principales de errores los cuales son:
+
+- **Blunders/ Bad theory:** Que se refieren a una mala implementación de los datos o de la teoría.
+- **Random errors:** Eventos aleatorios que no están bajo nuestra jurisdicción.
+- **Approximation errors:** Se refiere a los valores cercanos pero no iguales a los exactos en ámbitos matemáticos.
+- **Round-off errors:** Que se refiere a las limitaciones respecto al computador en almacenar o procesar datos.
+
+### Novena clase: 16-Junio-2015
 
 #####Interpolación
 Busca unir varios puntos por medio de funciones halladas con distintos métodos.
@@ -269,16 +375,66 @@ A diferencia de la interpolación, los ajustes buscan una función sencilla cuyo
 ```python
 import numpy as np
 ajuste = np.polyfit(x,y,n) #Donde n es el órden del polinomio para el ajuste.
-def func (x): #define la función que maneja el ajuste.
+def func (x): # Define la función que maneja el ajuste.
 	return ajuste[0]*(x**n) + ajuste[1]*(x**(n-1)) ... + ajuste[n]
+# La función definida ya puede recibir valores de "x" y ser graficada o usada.
+```
+#### Campo Magnético (H_O7)
+
+```python
+%pylab inline
+import scipy.optimize as sp
+x=[0.023,0.028,0.032,0.037,0.042] #Datos en las medidas apropiadas.
+y=[0.034745,0.019689,0.012594,0.007982,0.005822]
+
+def func(r,a):
+    return a/(r**3)
+
+ajuste = sp.curve_fit(func,x,y)
+laA= ajuste[0]
+momentum = laA/(2*10**-7)
+print ("El momentum dipolar magnético es de : %.3f" % momentum)
+
+x2 = linspace(0.023,0.042,100)
+
+figure(figsize=(9,9))
+plot(x2,func(x2,laA),"r")
+scatter(x,y,label='Datos')
+title(u'Campo magnético')
+xlabel('r(m)')
+ylabel('B(T)')
+legend()
+show()
 ```
 
-### Novena clase: 17-Junio-2015
-Raices
-Git Hub: Ramas
-Análisis De fourier
+Y para crear la pseudo-tabla se uso:
 
-### Décima Clase: 19-Junio-2015
+```python
+soluciones = func(x2,laA)
+
+print('Distancia(cm)    Campo B(uT)')
+for i in range(len(x2)):
+    print('%.4f            %.2f'%(x2[i]*10**2,soluciones[i]*10**6))
+
+```
+### Décima clase: 17-Junio-2015
+
+Se trabajó algo acerca de las raices de funciones y los métodos computacionales para hallarlas.
+
+####Git: Ramas
+
+Se aprendió acerca del uso de *ramas* de git las cuales se refiere a distintos caminos o estadios que puede tener un reposiorio al mismo tiempo. Por ejemplo, la rama pŕincipal por defecto se llama **"Master"**
+```bash
+$ git branch nuevarama # Crea una nueva rama.
+$ git checkout nuevarama # Indíca trabajar en la nueva rama.
+$ git checkout master # Se devuelve a la rama principal
+$ git merge nuevarama # Combina la nueva rama con la principal
+```
+#### Análisis De fourier
+
+Se habló sobre la transformada de *fourier* sus aplicaciones y algo de su implementación en python con ejemplos de cosas útiles que han influido en el diario vivir como el manejo de señales de sonido.
+
+### Inceava Clase: 19-Junio-2015
 
 Se trabajó acerca de **la transformada Fourier** y el manejo de imágenes en python con el uso de la librería **scipy**.
 
@@ -309,6 +465,8 @@ plt.imshow(negativo, cmap="gray") # Se plotea el negativo en escala de grises.
 ...
 ```
 
+![negativo](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on9/negativo.png)
+
 Asimismo, se puede **invertir horizontalmente**.
 
 ```python
@@ -320,7 +478,7 @@ for i in range(len(lena)):
 plt.imshow(horizontal, cmap="gray")# Se plotea el negativo en escala de grises.
 ...
 ```
-
+![horizontal](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on9/Horizontal.png)
 o se puede **invertir vericalmente**.
 
 ```python
@@ -332,8 +490,9 @@ for i in range(len(lena)):
 plt.imshow(vertical, cmap="gray") # Se plotea el negativo en escala de grises.
 ...
 ```
+![vertical](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on9/Vertical.png)
 
-### Onceava Clase: 23-Junio-2015
+### Doceava Clase: 23-Junio-2015
 
 ##### Derivación numérica
 
@@ -384,7 +543,7 @@ show()
 ![Solar Cycle Freq](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on10/Freq.png)
 
 
-### Doceava clase: 24-Junio-2015
+### Treceava clase: 24-Junio-2015
 #### Integración numérica
 **Trapezoidal:** Uniendo valores de F(x) por líneas rectas en distintos espacios.
 **Polinomial:** Se unen valores de F(x) empleando interpolaciones con polinomios de 2do grado.
@@ -404,7 +563,7 @@ map.show_mpl(figsize=(8, 8)) #Crea el mapa como figúra de Matplotlib con unas d
 plot(x,y) #Plotea el recorrido usando las posiciones en pixeles como un comando de Matplotlib.
 show()
 ```
-### Treceava clase: 26-Junio-2015
+### Catorceava clase: 26-Junio-2015
 
 #### Solución a ecuaciones diferenciales.
 
@@ -412,7 +571,7 @@ Se estudiaron métodos para la solución de ecuaciones diferenciales ordinarias 
 
 (H_O11)
 
-### Catorceava clase: 30-Junio-2015
+### Quinceava clase: 30-Junio-2015
 
 #### Ecuaciones diferenciales ordinarias con método adaptativo
 
