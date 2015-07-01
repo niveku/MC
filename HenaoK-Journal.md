@@ -407,6 +407,8 @@ legend()
 show()
 ```
 
+![Campo](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on7/campo.png)
+
 Y para crear la pseudo-tabla se uso:
 
 ```python
@@ -417,6 +419,11 @@ for i in range(len(x2)):
     print('%.4f            %.2f'%(x2[i]*10**2,soluciones[i]*10**6))
 
 ```
+
+#### Proyecto
+
+He considerado que la mejor opción es recrear la nucleación y formación de un cristal sencillo de galena (ya que es cúbico) pero para esto debo investigar más acerca de las constantes de fuerzas interatómicas que se involúcran en este proceso.
+
 ### Décima clase: 17-Junio-2015
 
 Se trabajó algo acerca de las raices de funciones y los métodos computacionales para hallarlas.
@@ -439,6 +446,9 @@ Se habló sobre la transformada de *fourier* sus aplicaciones y algo de su imple
 Se trabajó acerca de **la transformada Fourier** y el manejo de imágenes en python con el uso de la librería **scipy**.
 
 #### Lena (H_O9)
+
+![Lena](https://raw.githubusercontent.com/niveku/MC/master/hands_on/hands_on9/lena.png)
+
 Lena es un ejemplo de una foto de un mujer convertida en una matriz de 512x512 que contiene los datos sobre su color en escala de grises. Se puede observar de la siguiente forma:
 
 ```python
