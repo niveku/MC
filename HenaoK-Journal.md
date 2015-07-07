@@ -591,3 +591,10 @@ Se estudió un método en clase que permitía ir revisando el error local y glob
 **Adam-Bashfort: ** Método de resolución de ecuaciones diferenciales ordinarias que encuentra la interpolación de derivadas anteriores y extrapola la solución.
 
 (H_O12)
+
+### Dieciseisava clase: 1-Julio-2015
+### 17ava clase: 3-Julio-2015
+### 18ava clase: 7-Julio-2015
+Ecuaciones diferenciales pasos finitos
+Ecuación de onda
+Método de relajación
